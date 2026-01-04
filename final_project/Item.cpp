@@ -10,3 +10,10 @@ int Item::getId() const{
     return id;
 }
 
+string Item::getName() const {
+    return name;
+}
+
+bool Item::isAvailable() const{
+    return isBorrowed;
+}

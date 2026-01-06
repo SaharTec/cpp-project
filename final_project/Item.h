@@ -14,9 +14,9 @@ private:
 public:
     Item(int id, const string& name);
     int getId() const;              //get the id code of the item
-    string getName() const;        //get the name of the item
+    string& getName() ;             //get the name of the item
     bool isAvailable() const;       //get if the item is available
-    string& getBorrower() const;    //return the name of the borrowed name(if the item is't avalibale)
+    string& getBorrower() ;         //return the name of the borrowed name(if the item is't avalibale)
 
     void borrow(const string& username);
     /**

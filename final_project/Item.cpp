@@ -6,7 +6,7 @@ using namespace std;
 
 Item::Item(int id,const string& name): id(id), name(name), isBorrowed(false), borrowedBy(""){}
 
-//return refrens of the id of the item
+//return refrence of the id of the item
 int Item::getId() const{
     return id;
 }
@@ -24,7 +24,7 @@ bool Item::isAvailable() const{
 }
 
 
-//return refrens of the name of the person who borrowed the item
+//return refrence of the name of the person who borrowed the item
 string& Item::getBorrower() {
     return borrowedBy;
 }
@@ -50,14 +50,14 @@ void Item::returnBack(const string& username){
         throw runtime_error("username filld can be empty!");
     }
 
-    if(!isBorrowed){        //check if the item is't alredy borrowed
+    if(!isBorrowed){        //check if the item isn't already borrowed
         throw runtime_error("this item is't borrowed!");
     }
 
-    if(borrowedBy != username){   //check if other person tring to return the item
+    if(borrowedBy != username){   //check if other person trying to return the item
         throw runtime_error("username have to be the same as the one who borrowed");
     }
-    //update the item to be availeble
+    //update the item to be available.
     isBorrowed = false;
     borrowedBy = "";
 }

@@ -8,7 +8,7 @@ class Item
 private:
     int id;             // user id
     string name;        // the name of the item (camera, Laptop...)
-    bool isBorrowed;    // return if the the item is alredy borrowed
+    bool isBorrowed;    // return if the the item is already borrowed
     string borrowedBy;  // the name of the user that borrowd the item
 
 public:

@@ -4,6 +4,8 @@
 #include <sys/socket.h>
 #include <arpa/inet.h>
 #include <unistd.h>
+#include <readline/readline.h>
+#include <readline/history.h>
 using namespace std;
 
 // Read from the socket one char at a time until he get a new line
@@ -89,12 +91,23 @@ int main(int argc, char* argv[]) {
     
     string userInput;
     while (true) {
-        cout << "> ";
+        // cout << "> ";
         
         // getting the commend from the user
-        if (!getline(cin, userInput)) {
-            break;
+        // if (!getline(cin, userInput)) {
+        //     break;
+        // }
+
+        char* line = readline("> ");
+        if (!line) break; //ctrl+D
+
+        userInput = line;
+
+        if (!userInput.empty()) {
+            add_history(line);
         }
+
+        free(line);
 
         if (userInput.empty()) {
             continue;

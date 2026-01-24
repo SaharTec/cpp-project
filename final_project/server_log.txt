@@ -19,3 +19,10 @@ MAX log in
 MAX return item: 1
 SAHAR disconnected
 MAX disconnected
+Tzahor log in
+Tzahor borrowed item: 2
+Tzahor return item: 2
+Tzahor disconnected
+Tzahor log in
+Tzahor borrowed item: 1
+Tzahor disconnected

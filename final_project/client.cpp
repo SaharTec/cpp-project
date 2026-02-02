@@ -25,7 +25,7 @@ string recvLine(int sockfd) {
     return line;
 }
 
-// Send the data eith the needed new line character
+// Send the data with the needed new line character
 bool sendLine(int sockfd, const string& line) {
     string msg = line + "\n";
     int sent = send(sockfd, msg.c_str(), msg.length(), 0);
@@ -85,7 +85,7 @@ int main(int argc, char* argv[]) {
         return 1;
     }
 
-    cout << "Connected to server at " << serverIp << ":" << port << endl;
+    cout << "Connected to server at " << serverIp << ": " << port << endl;
     cout << "Type your commands (HELLO, LIST, BORROW, RETURN, WAIT, QUIT):" << endl;
 
     
